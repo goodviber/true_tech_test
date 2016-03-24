@@ -1,0 +1,6 @@
+<p><%= @tweet.title %></p>
+
+<div class="btn-group">
+  <%= link_to 'Edit', edit_tweet_path(@tweet), class: 'btn btn-info' %>
+  <%= link_to 'Delete', tweet_path(@tweet), data: {confirm: 'Are you sure?'}, method: :delete, class: 'btn btn-danger' %>
+</div>

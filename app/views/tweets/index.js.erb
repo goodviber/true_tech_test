@@ -1,0 +1,7 @@
+$('#tweets').append('<%= j render(@tweets) %>');
+<% if @tweets.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate(@tweets) %>');
+<% else %>
+  $('.pagination').remove();
+<% end %>
+<% sleep 1 %>

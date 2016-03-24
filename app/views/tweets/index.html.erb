@@ -1,0 +1,10 @@
+<h1>The Tweet Index Page</h1>
+<p><%= link_to 'Tweet!', new_tweet_path, class: 'btn btn-primary btn-large' %></p>
+
+  <div id="tweets">
+    <%= render @tweets %>
+  </div>
+
+  <div id="scrolling">
+    <%= will_paginate @tweets %>
+  </div>
